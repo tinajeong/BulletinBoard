@@ -30,7 +30,7 @@ public class Category {
 	private Long id;
 
 	@Column(nullable = false)
-	@Size(min =1, max = 60)
+	@Size(min = 1, max = 60)
 	private String name;
 
 	@Column(name = "parent_id")

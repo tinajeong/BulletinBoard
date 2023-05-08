@@ -8,10 +8,10 @@ import lombok.Getter;
 @Getter
 public class Category {
 
-	private Long id;
-	private String name;
-	private Long parentId;
-	private List<Long> childrenIds;
+	private final Long id;
+	private final String name;
+	private final Long parentId;
+	private final List<Long> childrenIds;
 
 	public Category(Long id, String name, Long parentId) {
 		this.id = id;

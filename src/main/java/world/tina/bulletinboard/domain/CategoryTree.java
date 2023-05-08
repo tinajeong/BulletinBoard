@@ -11,7 +11,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import world.tina.bulletinboard.exception.JsonConversionException;
 
 public class CategoryTree {
-	private List<Category> categories;
+	private final List<Category> categories;
 	private static final ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
 	public CategoryTree() {
@@ -45,7 +45,6 @@ public class CategoryTree {
 			.filter(category -> category.getName().equalsIgnoreCase(name))
 			.collect(Collectors.toList());
 	}
-
 
 	public String getCategoryByIdAsJson(Long id) {
 		Category category = getCategoryById(id);
